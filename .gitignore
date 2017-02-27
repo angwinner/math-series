@@ -39,4 +39,5 @@ pip-delete-this-directory.txt
 
 # virtualenv
 seriesvenv/
+.cache/
 
