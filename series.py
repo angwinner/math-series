@@ -2,7 +2,7 @@ from __future__ import print_function
 
 
 def fibonacci(n):
-    """ returns the nth element of the Fibonacci sequence """
+    """ return the nth element of the Fibonacci sequence """
     if n == 1:
         return 0
 
@@ -13,7 +13,7 @@ def fibonacci(n):
 
 
 def fibonacci_iter(n):
-    """ returns the nth element of the Fibonacci sequence """
+    """ return the nth element of the Fibonacci sequence """
     if n == 1:
         return 0
 
@@ -30,3 +30,27 @@ def fibonacci_iter(n):
         i = j
         j = k
     return k
+
+
+def lucas(n):
+    """ returns the nth element of the Lucas sequence """
+    if n == 1:
+        return 2
+
+    if n == 2:
+        return 1
+
+    return lucas(n-1) + lucas(n-2)
+
+
+def sum_series(n, first=0, second=1):
+    """ return the nth element of a series where each element is the
+    sum of the two previous elements """
+
+    if n == 1:
+        return first
+
+    if n == 2:
+        return second
+
+    return sum_series(n-1, first, second) + sum_series(n-2, first, second)
